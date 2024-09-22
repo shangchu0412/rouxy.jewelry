@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot'); /* 相對路徑 */
+  src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/icomoon.ttf') format('truetype'),
+       url('../fonts/icomoon.woff') format('woff'),
+       url('../fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\e901";
+  color: #FFF;
+}
+.icon-shope:before {
+  content: "\e902";
+  color: #FFF;
+}
+.icon-cart:before {
+  content: "\e900";
+  color: #FFF;
+}
+.icon-heart-shape:before {
+  content: "\e903";
+}
+.icon-jcb-card:before {
+  content: "\e904";
+  color: #FFF;
+}
+.icon-left-arrow:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-line:before {
+  content: "\e906";
+  color: #FFF;
+}
+.icon-mastercard:before {
+  content: "\e907";
+  color: #FFF;
+}
+.icon-menu:before {
+  content: "\e908";
+  color: #FFF;
+}
+.icon-plus:before {
+  content: "\e909";
+}
+.icon-right-arrow:before {
+  content: "\e90a";
+  color: #FFF;
+}
+.icon-search:before {
+  content: "\e90b";
+  color: #FFF;
+}
+.icon-visa-card:before {
+  content: "\e90e";
+  color: #FFF;
+}

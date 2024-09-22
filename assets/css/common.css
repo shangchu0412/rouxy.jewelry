@@ -1,0 +1,294 @@
+/* 版心 */
+.wrap {
+    margin: 0 auto;
+    max-width: 1224px;
+}
+
+/* =========== Header區塊 =========== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* 頂部導覽 */
+.nav-top {
+    background-color: var(--primary-color);
+}
+
+.nav-top .wrap {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+/* 搜尋按鈕 */
+.nav-top .search a {
+    display: block;
+    width: 60px;
+    text-align: center;
+}
+
+.nav-top .icon-search {
+    line-height: 48px;
+}
+
+.nav-top .search a:hover,
+.user-info:hover,
+.cart-amount:hover {
+    background-color: var(--secondary-color-1);
+}
+
+/* 會員登入&購物車狀態 */
+
+.user-status,
+.user-status .cart-amount {
+    display: flex;
+}
+
+.user-info,
+.cart-amount {
+    font-weight: 600;
+    color: #FFF;
+    font-size: 15px;
+}
+
+.user-info,
+.cart-amount {
+    width: 84px;
+    line-height: 48px;
+    text-align: center;
+}
+
+.cart-amount {
+    justify-content: center;
+}
+
+span.icon-cart {
+    margin-right: 8px;
+    line-height: 48px;
+}
+
+/* logo */
+
+.nav-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nav-main h1 a.logo {
+    margin-top: 71px;
+    display: block;
+    width: 163px;
+    height: 81px;
+    font-size: 0;
+    background-image: url(../images/logo.png);
+}
+
+
+/* 設定nav字體 */
+.nav-list {
+    display: flex;
+    font-family: 'Gowun Batang', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+}
+
+/* 設置導航項目為行內區塊，以便根據內容自動調整大小 */
+.nav-item {
+    display: inline-block;
+    /* 允許多個項目在同一行顯示 */
+    position: relative;
+    /* 為子元素提供相對定位參考 */
+}
+
+
+.dropdown-toggle {
+    z-index: 2;
+    display: block;
+    padding-top: 25px;
+    width: 153px;
+    height: 100px;
+    text-align: center;
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: var(--secondary-color-2);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-item.active .dropdown-toggle::after {
+    opacity: 1;
+}
+
+span {
+    display: block;
+}
+
+span.subH {
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--secondary-color-1);
+    transition: color 0.3s ease;
+}
+
+span.mainT {
+    font-size: 20px;
+    line-height: 29px;
+    color: var(--primary-color);
+}
+
+.nav-item.active span.subH {
+    color: var(--secondary-color-4);
+}
+
+/* 選單間的分隔線 */
+.nav-divider {
+    border-right: 1px solid var(--secondary-color-4);
+}
+
+/* 取消最後一個選單分隔線 */
+.nav-item:last-child .nav-divider {
+    border-right: none;
+}
+
+
+.nav-dropdown {
+    position: absolute;
+    z-index: 1;
+    display: inline-block;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.9s ease, opacity 0.9s ease;
+}
+
+.nav-item:hover .nav-dropdown {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 500px;
+}
+
+.dropdown-content a {
+    padding: 0 36px 0 20px;
+    line-height: 50px;
+    width: 153px;
+    text-align: right;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--primary-color);
+    opacity: 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--secondary-color-1);
+    color: #FFF;
+}
+
+.w-306 {
+    width: 306px;
+}
+
+.w-153 {
+    width: 153px;
+}
+
+
+
+/* =========== Footer 區塊 =========== */
+
+/* test */
+main {
+    margin-top: 300px;
+    height: 800px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+}
+
+/* footer網站地圖 */
+.footer-map {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-map-section {
+    padding: 48px 0;
+}
+
+.footer-map-section ul li {
+    margin-bottom: 8px;
+    line-height: 23px;
+}
+
+.footer-map-section ul li a {
+    color: #FFF;
+    font-weight: 200;
+}
+
+.footer-map-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* footer版權與社群 */
+
+.footer-divider {
+    border-top: 1px solid #FFF;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-info .copyright {
+    font-size: 12px;
+    color: #FFF;
+    line-height: 80px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-media a {
+    /* margin-left: 16px;
+    font-size: 30px; */
+    margin-left: 16px;
+    font-size: 30px;
+    color: #FFF;
+    /* 預設顏色 */
+    transition: color 0.3s ease;
+    /* 添加過渡效果 */
+}
+
+.social-media a:hover span:before{
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+}

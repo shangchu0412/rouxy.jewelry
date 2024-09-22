@@ -1,0 +1,10 @@
+:root {
+    --primary-color: #706560; /* 基本顏色 */
+    --secondary-color-1: #789488; /* 輔助色1 */
+    --secondary-color-2: #BDAAA2; /* 輔助色2 */
+    --secondary-color-3: #A19F9F; /* 輔助色3 */
+    --secondary-color-4: #885E4C; /* 輔助色4 */
+    --highlight-color: #F03E3E; /* 重點標記 */
+    --text-color: #3D3735; /* 文字顏色 */
+  }
+  
