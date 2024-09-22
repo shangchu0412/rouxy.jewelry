@@ -43,17 +43,65 @@ navItems.forEach(function(item) {
 // 當每個選單子項目超過10個時，改變寬度
 const navDropdowns = document.querySelectorAll('.nav-dropdown');
 
-navDropdowns.forEach(function(navDropdown) {
-  // 找到每個 .nav-dropdown 中的所有 a 標籤
-  const links = navDropdown.querySelectorAll('a');
+function updateDropdownWidth() {
+  // 檢查當前視窗寬度是否大於或等於1224px
+  if (window.innerWidth >= 1224) {
+    navDropdowns.forEach(function(navDropdown) {
+      const links = navDropdown.querySelectorAll('a');
 
-  // 當 a 標籤超過10個時，改變該 .nav-dropdown 的寬度
-  if (links.length > 10) {
-    navDropdown.classList.add('w-306'); // 添加 306px 寬度的類
-    navDropdown.classList.remove('w-153'); // 移除 153px 寬度的類
-  } else {
-    navDropdown.classList.add('w-153'); // 添加預設 153px 寬度的類
-    navDropdown.classList.remove('w-306'); // 移除 306px 寬度的類
+      // 當 a 標籤超過10個時，改變該 .nav-dropdown 的寬度
+      if (links.length > 10) {
+        navDropdown.classList.add('w-306'); // 添加 306px 寬度的類
+        navDropdown.classList.remove('w-153'); // 移除 153px 寬度的類
+      } else {
+        navDropdown.classList.add('w-153'); // 添加預設 153px 寬度的類
+        navDropdown.classList.remove('w-306'); // 移除 306px 寬度的類
+      }
+    });
+  }
+}
+
+// 初始執行
+updateDropdownWidth();
+
+// 在視窗調整大小時再次執行
+window.addEventListener('resize', updateDropdownWidth);
+
+
+const hamburgerCheckbox = document.getElementById('hamburger-checkbox');
+const navList = document.querySelector('.nav-list');
+const overlay = document.querySelector('.overlay');
+const hamburgerBtn = document.querySelector('.hamburger-btn');
+
+// 漢堡按鈕點擊事件
+hamburgerBtn.addEventListener('click', function () {
+    if (hamburgerCheckbox.checked === false) {
+        navList.style.left = '0'; // 顯示導航列
+        overlay.style.display = 'block'; // 顯示遮罩層
+        console.log(hamburgerCheckbox.checked); // 在点击时查看状态
+
+    } else {
+        navList.style.left = '-100%'; // 隱藏導航列
+        overlay.style.display = 'none'; // 隱藏遮罩層
+        console.log(hamburgerCheckbox.checked); // 在点击时查看状态
+
+    }
+});
+
+// 遮罩層點擊事件
+overlay.addEventListener('click', function () {
+    hamburgerCheckbox.checked = false; // 隱藏漢堡選單
+    navList.style.left = '-100%'; // 隱藏導航列
+    overlay.style.display = 'none'; // 隱藏遮罩層
+});
+
+// 視窗大小變更時隱藏已展開的導航列和遮罩層
+window.addEventListener('resize', function () {
+  if (window.innerWidth >= 1224) {
+      hamburgerCheckbox.checked = false; // 確保漢堡選單取消選取
+      navList.style.left = '-100%'; // 隱藏導航列
+      overlay.style.display = 'none'; // 隱藏遮罩層
   }
 });
+
 

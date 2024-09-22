@@ -14,15 +14,22 @@
         rel="stylesheet">
 
 </head>
+
 <body>
     <header>
+        <input type="checkbox" name="" id="hamburger-checkbox">
         <!-- 頂端導覽 -->
         <div class="nav-top">
             <div class="wrap">
-                <div class="search">
-                    <a href="#">
-                        <span class="icon-search"></span>
-                    </a>
+                <div class="nav-action-group">
+                    <label for="hamburger-checkbox" class="hamburger-btn">
+                        <span>漢堡選單</span>
+                    </label>
+                    <div class="search">
+                        <a href="#">
+                            <span class="icon-search"></span>
+                        </a>
+                    </div>
                 </div>
                 <div class="user-status">
                     <a href="#" class="user-info">
@@ -35,6 +42,7 @@
                 </div>
             </div>
         </div>
+        <div class="overlay"></div>
         <div class="nav-main wrap">
             <!-- Logo -->
             <h1>
@@ -48,6 +56,7 @@
                         <div class="nav-divider">
                             <span class="subH">About us</span>
                             <span class="mainT">關於我們</span>
+                            <span class="arrow"></span>
                         </div>
                     </a>
                     <div class="nav-dropdown">

@@ -26,6 +26,59 @@ header {
     justify-content: space-between;
 }
 
+.nav-action-group {
+    display: flex;
+}
+
+/* 漢堡按鈕 */
+
+#hamburger-checkbox {
+    display: none;
+}
+
+.hamburger-btn {
+    cursor: pointer;
+    position: relative;
+    display: none;
+    width: 60px;
+}
+
+.hamburger-btn span {
+    font-size: 0;
+}
+
+.hamburger-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 22px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0px 6px 0px #FFF,
+        0px -6px 0px #FFF;
+}
+
+/* 遮罩層 */
+.overlay {
+    display: none;
+    /* 預設不顯示 */
+    position: fixed;
+    top: 48px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    /* 半透明背景 */
+    z-index: 8;
+    /* 確保在其他內容之上 */
+}
+
+
 /* 搜尋按鈕 */
 .nav-top .search a {
     display: block;
@@ -39,7 +92,8 @@ header {
 
 .nav-top .search a:hover,
 .user-info:hover,
-.cart-amount:hover {
+.cart-amount:hover,
+.hamburger-btn:hover {
     background-color: var(--secondary-color-1);
 }
 
@@ -289,6 +343,91 @@ footer {
     /* 添加過渡效果 */
 }
 
-.social-media a:hover span:before{
+.social-media a:hover span:before {
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* =========== RWD 區塊 =========== */
+
+@media(max-width:1224px) {
+
+    /* 漢堡按鈕 */
+    .hamburger-btn {
+        display: block;
+    }
+
+    /* 導覽列 */
+    .nav-list {
+        position: absolute;
+        top: 48px;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.9);
+        transition: left 0.8s ease;
+        overflow: auto;
+        transition: left 0.8s ease;
+        z-index: 9;
+    }
+
+    .dropdown-toggle {
+        width: 100%;
+        height: 53px;
+        padding-top: 0;
+    }
+
+    .nav-divider {
+        display: flex;
+        border-right: 0;
+        border-bottom: 1px solid var(--secondary-color-4);
+        height: 100%;
+        align-items: center;
+    }
+
+    .nav-divider span.subH,
+    span.mainT {
+        flex-grow: 0;
+    }
+
+    .nav-divider span.subH {
+        padding-left: 32px;
+        text-align: left;
+        width: 96px;
+    }
+
+    .nav-divider span.mainT {
+        padding: 0 36px;
+    }
+
+    .nav-divider span.arrow {
+        flex-grow: 2;
+    }
+
+    .nav-dropdown {
+        position: relative;
+        box-shadow: none;
+        height: auto;
+        width: 100%;
+    }
+
+    .dropdown-content {
+        max-height: none;
+    }
+
+    .dropdown-content a {
+        padding: 0 36px 0 0;
+        width: 100%;
+    }
+
+    .nav-item:hover .nav-dropdown {
+        max-height: none;
+    }
+
+    /* LOGO */
+    .nav-main h1 a.logo {
+        margin: 20px auto;
+    }
+
+
 }
