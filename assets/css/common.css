@@ -323,7 +323,8 @@ footer {
 .footer-info .copyright {
     font-size: 12px;
     color: #FFF;
-    line-height: 80px;
+    margin: 32px 0;
+    line-height: 17px;
 }
 
 .social-media {
@@ -467,11 +468,6 @@ footer {
 
     .footer-info {
         flex-direction: column;
-    }
-
-    .footer-info .copyright {
-        margin: 32px 0;
-        line-height: 17px;
     }
 
     .footer-info .social-media {
