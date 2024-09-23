@@ -104,4 +104,58 @@ window.addEventListener('resize', function () {
   }
 });
 
+// 獲取logo和nav-main容器
+const logo = document.querySelector('.nav-main h1 a.logo');
+const navMain = document.querySelector('.nav-main');
+
+// 設定初始的logo高度和寬度
+const initialLogoHeight = 81; // 原始高度
+const initialWidth = 120; // 新寬度
+const newMarginTop = 16; // 新的margin-top
+
+// 設置logo樣式的函式
+function setLogoStyles() {
+    if (window.innerWidth < 1224) {
+        logo.style.margin = '20px auto'; // 小於1224px時的margin
+        logo.style.height = '81px'; // 小於1224px時的高度
+        navMain.style.width = 'auto'; // 小於1224px時的寬度
+    } else {
+        logo.style.marginTop = '71px'; // 大於等於1224px時的margin-top
+        logo.style.marginBottom = '0'; // 確保不會有margin-bottom
+        navMain.style.width = 'auto'; // 可以根據需要設置
+        logo.style.height = '81px'; // 大於等於1224px時的高度
+    }
+}
+
+window.addEventListener('scroll', () => {
+    if (window.innerWidth >= 1224) { // 只在寬度大於等於1224時檢查滾動
+        if (window.scrollY > 100) {
+            // 當滾動超過100px時
+            logo.style.marginTop = `${newMarginTop}px`;
+            logo.style.marginBottom = '0'; // 確保在滾動時的margin-bottom為0
+            navMain.style.width = `${initialWidth}px`;
+            
+            // 根據新寬度計算新的高度，假設原始比例為163px:81px
+            const newHeight = (initialWidth / 163) * initialLogoHeight;
+            logo.style.height = `${newHeight}px`;
+        } else {
+            // 回到原來的樣式
+            logo.style.marginTop = '71px';
+            logo.style.marginBottom = '0'; // 確保不會有margin-bottom
+            navMain.style.width = 'auto'; // 或者設定為你需要的初始寬度
+            logo.style.height = '81px'; // 回到原來的高度
+        }
+    } else {
+        // 若小於1224，恢復原狀
+        setLogoStyles(); // 調用函式
+    }
+});
+
+// 監控視窗大小變化
+window.addEventListener('resize', setLogoStyles);
+
+// 初始設置
+setLogoStyles();
+
+
 

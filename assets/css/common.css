@@ -144,6 +144,8 @@ span.icon-cart {
     height: 81px;
     font-size: 0;
     background-image: url(../images/logo.png);
+    background-size: contain; /* 自適應背景大小 */
+    background-repeat: no-repeat; /* 不重複 */
 }
 
 
