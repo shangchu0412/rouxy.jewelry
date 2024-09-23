@@ -157,7 +157,6 @@ span.icon-cart {
 /* 設置導航項目為行內區塊，以便根據內容自動調整大小 */
 .nav-item {
     display: inline-block;
-    /* 允許多個項目在同一行顯示 */
     position: relative;
     /* 為子元素提供相對定位參考 */
 }
@@ -365,11 +364,15 @@ footer {
         height: 100vh;
         flex-direction: column;
         background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
         transition: left 0.8s ease;
         overflow: auto;
-        transition: left 0.8s ease;
         z-index: 9;
     }
+
+    .nav-item:nth-child(n+2) {
+        margin-top: -16px; /* 向上移動 16px */
+      }
 
     .dropdown-toggle {
         width: 100%;
@@ -429,5 +432,49 @@ footer {
         margin: 20px auto;
     }
 
+    .footer-map {
+        padding-left: 43px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
+    .footer-map .footer-map-section {
+        margin-right: 28px;
+    }
+
+    .footer-info {
+        margin: 0 24px;
+    }
+}
+
+@media(max-width:904px) {
+    .footer-map {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        justify-content: flex-start;
+    }
+
+    .footer-map-section {
+        padding: 16px 0;
+    }
+
+}
+
+@media(max-width:768px) {
+    .footer-map {
+        justify-content: flex-start;
+    }
+
+    .footer-info {
+        flex-direction: column;
+    }
+
+    .footer-info .social-media {
+        margin-bottom: 24px;
+    }
+
+    .footer-info .social-media a {
+        margin-left: 0;
+        margin-right: 16px;
+    }
 }
