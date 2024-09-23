@@ -469,6 +469,11 @@ footer {
         flex-direction: column;
     }
 
+    .footer-info .copyright {
+        margin: 32px 0;
+        line-height: 17px;
+    }
+
     .footer-info .social-media {
         margin-bottom: 24px;
     }
