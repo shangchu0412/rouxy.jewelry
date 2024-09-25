@@ -339,15 +339,11 @@ footer {
     align-items: center;
 }
 
-.social-media a {
-    /* margin-left: 16px;
-    font-size: 30px; */
+.social-media a::before,
+.social-media span::before {
     margin-left: 16px;
     font-size: 30px;
     color: #FFF;
-    /* 預設顏色 */
-    transition: color 0.3s ease;
-    /* 添加過渡效果 */
 }
 
 
