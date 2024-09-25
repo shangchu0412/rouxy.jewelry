@@ -158,4 +158,23 @@ window.addEventListener('resize', setLogoStyles);
 setLogoStyles();
 
 
+// 獲取按鈕元素
+const backToTopButton = document.getElementById('backToTop-btn');
+
+// 監聽滾動事件，控制按鈕的顯示與隱藏
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopButton.style.display = 'flex'; // 滾動超過300px時顯示按鈕
+    } else {
+        backToTopButton.style.display = 'none'; // 回到頂部附近時隱藏按鈕
+    }
+});
+
+// 點擊按鈕，回到頁面頂端
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // 平滑滾動回頂端
+    });
+});
 

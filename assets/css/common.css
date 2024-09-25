@@ -12,7 +12,6 @@ header {
     left: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* 頂部導覽 */
@@ -145,8 +144,10 @@ span.icon-cart {
     height: 81px;
     font-size: 0;
     background-image: url(../images/logo.png);
-    background-size: contain; /* 自適應背景大小 */
-    background-repeat: no-repeat; /* 不重複 */
+    background-size: contain;
+    /* 自適應背景大小 */
+    background-repeat: no-repeat;
+    /* 不重複 */
 }
 
 
@@ -232,7 +233,6 @@ span.icon-right-arrow-wrapper {
     position: absolute;
     z-index: 1;
     display: inline-block;
-    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -350,9 +350,39 @@ footer {
     /* 添加過渡效果 */
 }
 
-.social-media a:hover span:before {
+
+#backToTop-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-color: var(--secondary-color-2);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-left-arrow::before {
+    transform: rotate(90deg);
+    color: #FFF;
+    font-size: 30px;
+}
+
+.backToTop-btn:hover {
+    background-color: var(--secondary-color-1);
+}
+
+/* =========== 所有使用到陰影的集合 =========== */
+.social-media a:hover span:before,
+#backToTop-btn,
+.nav-dropdown,
+header {
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
 }
+
 
 /* =========== RWD 區塊 =========== */
 
@@ -379,8 +409,9 @@ footer {
     }
 
     .nav-item:nth-child(n+2) {
-        margin-top: -16px; /* 向上移動 16px */
-      }
+        margin-top: -16px;
+        /* 向上移動 16px */
+    }
 
     .dropdown-toggle {
         width: 100%;
@@ -421,7 +452,8 @@ footer {
     span.icon-right-arrow {
         display: inline-block;
         transition: transform 0.3s ease;
-        transform-origin: center; /* 保證箭頭在自身中間旋轉 */
+        transform-origin: center;
+        /* 保證箭頭在自身中間旋轉 */
         color: var(--primary-color);
     }
 
