@@ -367,7 +367,7 @@ footer {
     font-size: 30px;
 }
 
-.backToTop-btn:hover {
+#backToTop-btn:hover {
     background-color: var(--secondary-color-1);
 }
 
