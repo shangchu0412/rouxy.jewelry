@@ -339,11 +339,25 @@ footer {
     align-items: center;
 }
 
+.social-media a,
+.social-media span {
+    margin-left: 16px;
+}
+
+.social-media a span{
+    margin-left: 0;
+}
+
+
 .social-media a::before,
 .social-media span::before {
-    margin-left: 16px;
+    border-radius: 50%;
     font-size: 30px;
     color: #FFF;
+}
+
+.social-media a:hover span{
+    transform: scale(1.2);
 }
 
 
@@ -372,7 +386,7 @@ footer {
 }
 
 /* =========== 所有使用到陰影的集合 =========== */
-.social-media a:hover span:before,
+.social-media a:hover span::before,
 #backToTop-btn,
 .nav-dropdown,
 header {
