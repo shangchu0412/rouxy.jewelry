@@ -84,6 +84,7 @@ header {
     display: block;
     width: 60px;
     text-align: center;
+    color: #FFF;
 }
 
 .nav-top .icon-search {
@@ -206,6 +207,10 @@ span.mainT {
     font-size: 20px;
     line-height: 29px;
     color: var(--primary-color);
+}
+
+span.icon-right-arrow-wrapper {
+    display: none;
 }
 
 .nav-item.active span.subH {
@@ -406,8 +411,18 @@ footer {
         padding: 0 36px;
     }
 
-    .nav-divider span.arrow {
+    span.icon-right-arrow-wrapper {
+        padding-right: 32px;
+        display: block;
         flex-grow: 2;
+        text-align: right;
+    }
+
+    span.icon-right-arrow {
+        display: inline-block;
+        transition: transform 0.3s ease;
+        transform-origin: center; /* 保證箭頭在自身中間旋轉 */
+        color: var(--primary-color);
     }
 
     .nav-dropdown {
@@ -429,6 +444,11 @@ footer {
     .nav-item:hover .nav-dropdown {
         max-height: none;
     }
+
+    .nav-item:hover .icon-right-arrow {
+        transform: rotate(90deg);
+    }
+
 
     /* LOGO */
     .nav-main h1 a.logo {
