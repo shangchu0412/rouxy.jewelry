@@ -11,6 +11,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 6;
     background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -275,15 +276,14 @@ span.icon-right-arrow-wrapper {
     width: 153px;
 }
 
+/* =========== main 區塊 =========== */
 
-
-/* =========== Footer 區塊 =========== */
-
-/* test */
 main {
     margin-top: 300px;
     height: 800px;
 }
+
+/* =========== Footer 區塊 =========== */
 
 footer {
     display: flex;
@@ -383,6 +383,11 @@ header {
 /* =========== RWD 區塊 =========== */
 
 @media(max-width:1224px) {
+
+    main {
+        margin-top: 168px;
+        height: 800px;
+    }
 
     /* 漢堡按鈕 */
     .hamburger-btn {

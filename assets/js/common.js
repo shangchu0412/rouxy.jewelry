@@ -1,5 +1,5 @@
 
-/* Header區塊 */
+/* ========= Header區塊 ========= */
 
 // 當進入某一選單時，下滑至子選單時讓主選單依然有hover效果
 // 儲存所有 .nav-item
@@ -158,6 +158,8 @@ window.addEventListener('resize', setLogoStyles);
 setLogoStyles();
 
 
+/* ========= 返回頂端按鈕 ========= */
+
 // 獲取按鈕元素
 const backToTopButton = document.getElementById('backToTop-btn');
 
@@ -177,4 +179,5 @@ backToTopButton.addEventListener('click', () => {
         behavior: 'smooth' // 平滑滾動回頂端
     });
 });
+
 

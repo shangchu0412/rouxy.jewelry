@@ -1,0 +1,100 @@
+/* ========= 輪播器 ========= */
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    /* 最大寬度 */
+    overflow: hidden;
+    aspect-ratio: 1920 / 700;
+    /* 維持比例 */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 100%;
+    /* 確保內部內容填滿 */
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 100%;
+    /* 確保每張圖片填滿容器 */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    /* 確保圖片填滿容器 */
+    object-fit: cover;
+    /* 確保圖片按比例縮放且不變形 */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(40px, 4vw, 61px);
+    /* 使用 clamp 設定最小值、動態值及最大值 */
+    height: clamp(40px, 4vw, 61px);
+    /* 同樣的設定寬高 */
+    background-color: var(--primary-color);
+    /* 預設背景色 */
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+    color: #FFF !important;
+    /* iconfont 的顏色 */
+    border-radius: 50%;
+    /* 按鈕變成圓形 */
+}
+
+.carousel-control.left {
+    left: 24px;
+}
+
+.carousel-control.right {
+    right: 24px;
+}
+
+.carousel-control.left.icon-left-arrow::before,
+.carousel-control.right.icon-right-arrow::before{
+    transform: none;
+    font-size: clamp(11px, 1vw, 16px); /* 動態調整 iconfont 大小 */
+}
+
+/* 當 hover 時改變背景顏色 */
+.carousel-control:hover {
+    background-color: var(--secondary-color-1);
+}
+
+
+.indicator-container {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    /* 往上20px的位置 */
+    left: 50%;
+    transform: translateX(-50%);
+    /* 確保在中間 */
+    z-index: 5;
+    /* 確保在輪播上面 */
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #FFF;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: var(--primary-color);
+}
