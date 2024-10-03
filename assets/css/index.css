@@ -146,6 +146,9 @@ main .title-product .more-link:hover {
 
 .selection-guide {
     text-align: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/guide-background.webp);
+    background-repeat: repeat;
+    background-size: cover;
 }
 
 
@@ -167,6 +170,66 @@ main .title-product .more-link:hover {
     height: 6px;
     background-color: var(--primary-color);
 }
+
+/* function btn */
+
+.selection-guide .wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.selection-guide .function-btn,
+.selection-guide .form-btn {
+    display: flex;
+    margin-bottom: 48px;
+}
+
+.selection-guide .function-btn .guide-btn-link {
+    margin-right: 44px;
+    width: 200px;
+    height: 200px;
+}
+
+.selection-guide .function-btn .guide-btn-link:nth-child(4n) {
+    margin-right: 0;
+}
+
+
+.selection-guide .function-btn .guide-btn-link:hover img,
+.selection-guide .form-btn .guide-btn-link:hover img {
+    transform: scale(1.13);
+}
+
+.selection-guide .function-btn .guide-btn-link img,
+.selection-guide .form-btn .guide-btn-link img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.25), 0px 2px 8px rgba(0, 0, 0, 0.35);
+    border-radius: 32px;
+    opacity: 0.8;
+    transition: all 1.2s ease-out;
+}
+
+/* form btn */
+
+.selection-guide .form-btn .guide-btn-link img {
+    opacity: 0.6;
+}
+
+.selection-guide .form-btn .guide-btn-link {
+    margin-right: 66px;
+    width: 265px;
+    height: 265px;
+}
+
+.selection-guide .form-btn .guide-btn-link:nth-child(4n) {
+    margin-right: 0;
+}
+
+
+
 
 /* 產品卡片 */
 
@@ -276,4 +339,49 @@ main .title-product .more-link:hover {
     .product {
         justify-content: space-around;
     }
+
+
+    .selection-guide .function-btn,
+    .selection-guide .form-btn {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+    }
+
+    .selection-guide .function-btn .guide-btn-link,
+    .selection-guide .form-btn .guide-btn-link {
+        display: inline-block;
+        /* margin-bottom: 56px; */
+        margin-right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .selection-guide .function-btn .guide-btn-link {
+        padding: 5% 30%;
+    }
+
+    .selection-guide .form-btn .guide-btn-link {
+        padding: 6% 20%;
+    }
+
+    .selection-guide .form-btn .guide-btn-link:first-child{
+        padding-top: 0;
+    }
+
+    .selection-guide .function-btn .guide-btn-link img{
+        border-radius: 11%;
+    }
+
+    .selection-guide .form-btn .guide-btn-link img {
+        border-radius: 13%;
+    }
+
+
+    .selection-guide .function-btn .guide-btn-link:last-child,
+    .selection-guide .form-btn .guide-btn-link:last-child {
+        margin-bottom: 0;
+    }
+
 }
