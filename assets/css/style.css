@@ -26,6 +26,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-heart-shape:before {
+  content: "\e903";
+}
+.icon-plus:before {
+  content: "\e908";
+}
 .icon-facebook:before {
   content: "\e901";
 }
@@ -34,9 +40,6 @@
 }
 .icon-cart:before {
   content: "\e900";
-}
-.icon-heart-shape:before {
-  content: "\e903";
 }
 .icon-jcb-card:before {
   content: "\e904";
@@ -49,12 +52,6 @@
 }
 .icon-mastercard:before {
   content: "\e907";
-}
-.icon-menu:before {
-  content: "\e908";
-}
-.icon-plus:before {
-  content: "\e909";
 }
 .icon-right-arrow:before {
   content: "\e90a";

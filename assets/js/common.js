@@ -44,8 +44,8 @@ navItems.forEach(function(item) {
 const navDropdowns = document.querySelectorAll('.nav-dropdown');
 
 function updateDropdownWidth() {
-  // 檢查當前視窗寬度是否大於或等於1224px
-  if (window.innerWidth >= 1224) {
+  // 檢查當前視窗寬度是否大於或等於1248px
+  if (window.innerWidth >= 1248) {
     navDropdowns.forEach(function(navDropdown) {
       const links = navDropdown.querySelectorAll('a');
 
@@ -97,7 +97,7 @@ overlay.addEventListener('click', function () {
 
 // 視窗大小變更時隱藏已展開的導航列和遮罩層
 window.addEventListener('resize', function () {
-  if (window.innerWidth >= 1224) {
+  if (window.innerWidth >= 1248) {
       hamburgerCheckbox.checked = false; // 確保漢堡選單取消選取
       navList.style.left = '-100%'; // 隱藏導航列
       overlay.style.display = 'none'; // 隱藏遮罩層
@@ -115,20 +115,20 @@ const newMarginTop = 16; // 新的margin-top
 
 // 設置logo樣式的函式
 function setLogoStyles() {
-    if (window.innerWidth < 1224) {
-        logo.style.margin = '20px auto'; // 小於1224px時的margin
-        logo.style.height = '81px'; // 小於1224px時的高度
-        navMain.style.width = 'auto'; // 小於1224px時的寬度
+    if (window.innerWidth < 1248) {
+        logo.style.margin = '20px auto'; // 小於1248px時的margin
+        logo.style.height = '81px'; // 小於1248px時的高度
+        navMain.style.width = 'auto'; // 小於1248px時的寬度
     } else {
-        logo.style.marginTop = '71px'; // 大於等於1224px時的margin-top
+        logo.style.marginTop = '71px'; // 大於等於1248px時的margin-top
         logo.style.marginBottom = '0'; // 確保不會有margin-bottom
         navMain.style.width = 'auto'; // 可以根據需要設置
-        logo.style.height = '81px'; // 大於等於1224px時的高度
+        logo.style.height = '81px'; // 大於等於1248px時的高度
     }
 }
 
 window.addEventListener('scroll', () => {
-    if (window.innerWidth >= 1224) { // 只在寬度大於等於1224時檢查滾動
+    if (window.innerWidth >= 1248) { // 只在寬度大於等於1248時檢查滾動
         if (window.scrollY > 100) {
             // 當滾動超過100px時
             logo.style.marginTop = `${newMarginTop}px`;

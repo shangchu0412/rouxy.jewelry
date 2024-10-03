@@ -18,6 +18,7 @@ header {
 /* 頂部導覽 */
 .nav-top {
     background-color: var(--primary-color);
+    font-family: 'Noto Serif TC', serif;
 }
 
 .nav-top .wrap {
@@ -280,7 +281,6 @@ span.icon-right-arrow-wrapper {
 
 main {
     margin-top: 300px;
-    height: 800px;
 }
 
 /* =========== Footer 區塊 =========== */
@@ -289,6 +289,7 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: var(--primary-color);
+    font-family: 'Noto Serif TC', serif;
 }
 
 /* footer網站地圖 */
@@ -396,11 +397,10 @@ header {
 
 /* =========== RWD 區塊 =========== */
 
-@media(max-width:1224px) {
+@media(max-width:1248px) {
 
     main {
         margin-top: 168px;
-        height: 800px;
     }
 
     /* 漢堡按鈕 */

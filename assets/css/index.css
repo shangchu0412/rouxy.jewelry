@@ -62,9 +62,10 @@
 }
 
 .carousel-control.left.icon-left-arrow::before,
-.carousel-control.right.icon-right-arrow::before{
+.carousel-control.right.icon-right-arrow::before {
     transform: none;
-    font-size: clamp(11px, 1vw, 16px); /* 動態調整 iconfont 大小 */
+    font-size: clamp(11px, 1vw, 16px);
+    /* 動態調整 iconfont 大小 */
 }
 
 /* 當 hover 時改變背景顏色 */
@@ -97,4 +98,182 @@
 
 .indicator.active {
     background-color: var(--primary-color);
+}
+
+/* ========= 主要內容 ========= */
+
+
+/* 產品標題通用設置 */
+
+main .title-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+main .title-product .more-link {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+main .title-product .more-link span {
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+main .title-product .more-link:hover {
+    color: var(--secondary-color-1);
+}
+
+
+/* 最新打造 */
+
+.newest-product {
+    margin-top: 32px;
+}
+
+.newest-product,
+.popular-product,
+.other-jewelry {
+    margin-bottom: 48px;
+}
+
+/* 挑選指南 */
+
+.selection-guide {
+    text-align: center;
+}
+
+
+.selection-guide .guide-header {
+    position: relative;
+    display: inline-block;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+}
+
+.selection-guide .guide-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 6px;
+    background-color: var(--primary-color);
+}
+
+/* 產品卡片 */
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product .product-card {
+    width: 300px;
+}
+
+
+.product .product-card .product-img {
+    display: block;
+    height: 300px;
+    overflow: hidden;
+}
+
+.product .product-card .product-img {
+    transition: all 1.2s ease-out;
+}
+
+
+.product .product-card .product-info {
+    display: flex;
+}
+
+.product .product-card h5,
+.product-info .product-price {
+    padding: 12px;
+}
+
+.product .product-card .product-link:hover h5 {
+    color: var(--secondary-color-4);
+}
+
+.product-info .product-price {
+    flex-grow: 1;
+    font-size: 20px;
+    color: var(--secondary-color-1);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.product-info .product-price .original-price {
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: normal;
+    text-decoration: line-through;
+}
+
+.product-info .product-btn {
+    display: flex;
+    padding: 18px;
+    font-size: 20px;
+}
+
+.product-info .product-btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+}
+
+.product-info .product-btn a.icon-heart-shape {
+    margin-right: 12px;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.product-info .product-btn a.icon-plus {
+    background-color: var(--primary-color);
+    color: #FFF;
+}
+
+.product-info .product-btn a.icon-heart-shape:hover {
+    border: 2px solid var(--secondary-color-1);
+    color: var(--secondary-color-1);
+}
+
+.product-info .product-btn a.icon-plus:hover {
+    background-color: var(--secondary-color-1);
+}
+
+/* 首頁banner */
+
+.index-banner img {
+    display: block;
+    width: 100%;
+}
+
+
+/* =========== RWD 區塊 =========== */
+
+@media(max-width:1248px) {
+
+    .newest-product,
+    .popular-product,
+    .other-jewelry {
+        padding: 0 40px;
+    }
+
+    .product {
+        justify-content: space-around;
+    }
 }

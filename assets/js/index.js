@@ -84,3 +84,24 @@ carouselInner.addEventListener('mousedown', (event) => {
     document.addEventListener('mousemove', mouseMoveHandler);
     document.addEventListener('mouseup', mouseUpHandler);
 });
+
+
+
+// 產品卡片
+
+const productCards = document.querySelectorAll('.product-card');
+
+productCards.forEach(card => {
+    const productImg = card.querySelector('.product-img img'); // 每個卡片的圖片
+
+    card.addEventListener('mouseenter', () => {
+        productImg.src = './assets/images/products/bringing-wealth-and-blessings-2.webp'; // 更換為第二張圖片
+        productImg.style.transform = 'scale(1.2)'; // 圖片放大效果
+    });
+
+    card.addEventListener('mouseleave', () => {
+        productImg.src = './assets/images/products/bringing-wealth-and-blessings-1.webp'; // 恢復為第一張圖片
+        productImg.style.transform = 'scale(1)'; // 圖片恢復原來大小
+    });
+});
+
